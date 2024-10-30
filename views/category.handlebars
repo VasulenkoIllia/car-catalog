@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+
+<nav>
+	<a href="/">Головна</a> &gt;
+	{{#each breadcrumbs}}
+		<a href="/categories/{{this.fullPath}}">{{this.name}}</a> &gt;
+	{{/each}}
+</nav>
+
+<p>Опис: {{category.description}}</p>
+
+{{#if subCategories.length}}
+	<h2>Підкатегорії в категорії {{category.name}}:</h2>
+	<ul>
+		{{#each subCategories}}
+			<li>
+				<a href="/categories/{{../category.fullPath}}/category-{{this.slug}}">
+					<img src="{{this.image}}" alt="{{this.name}}" style="width: 100px; height: 100px; object-fit: cover;">
+					{{this.name}}
+				</a>
+			</li>
+		{{/each}}
+	</ul>
+{{else}}
+	<p>Немає підкатегорій у цій категорії.</p>
+{{/if}}
+
+<h2>Автомобілі в категорії {{category.name}}:</h2>
+{{#if cars.length}}
+	<ul>
+		{{#each cars}}
+			<li>
+				<a href="/categories/{{fullPath}}">
+					<img src="{{this.image}}" alt="{{this.name}}" style="width: 100px; height: 100px; object-fit: cover;">
+					{{this.name}} - {{this.price}}$
+				</a>
+			</li>
+		{{/each}}
+	</ul>
+{{else}}
+	<p>Немає автомобілів у цій категорії.</p>
+{{/if}}

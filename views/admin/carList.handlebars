@@ -1,0 +1,36 @@
+<table>
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Price</th>
+		<th>Color</th>
+		<th>Category</th>
+		<th>Action</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{#each cars}}
+		<tr>
+			<form action="/admin/cars/{{this._id}}/edit" method="POST">
+				<td><input type="text" name="name" value="{{this.name}}"></td>
+				<td><input type="text" name="description" value="{{this.description}}"></td>
+				<td><input type="number" name="price" value="{{this.price}}"></td>
+				<td><input type="text" name="color" value="{{this.color}}"></td>
+				<td>
+					<select name="category">
+						{{#each ../categories}}
+							<option value="{{this._id}}"
+										  	{{#ifEquals this._id ../this.category._id}}selected{{/ifEquals}}>
+								{{this.name}}
+							</option>
+						{{/each}}
+					</select>
+
+				</td>
+				<td><button type="submit">Save</button></td>
+			</form>
+		</tr>
+	{{/each}}
+	</tbody>
+</table>

@@ -1,0 +1,15 @@
+<h1>{{car.name}}</h1>
+
+<nav>
+	<a href="/">Головна</a> &gt;
+	{{#each breadcrumbs}}
+		<a href="/categories/{{this.fullPath}}">{{this.name}}</a> &gt;
+	{{/each}}
+</nav>
+
+<img src="{{car.image}}" alt="{{car.name}}" style="max-width:100%; height:auto;">
+<p>Ціна: {{car.price}}$</p>
+<p>Опис: {{car.description}}</p>
+<p>Колір: {{car.color}}</p>
+
+<a href="/{{breadcrumbs.[breadcrumbs.length-1].fullPath}}">Назад до категорії</a>

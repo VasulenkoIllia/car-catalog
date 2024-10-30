@@ -1,0 +1,3 @@
+{{#each categories}}
+	<option value="{{this._id}}" {{#ifEquals this._id ../selectedCategory}}selected{{/ifEquals}}>{{this.name}}</option>
+{{/each}}

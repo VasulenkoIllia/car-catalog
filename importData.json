@@ -1,0 +1,120 @@
+{
+  "categories": [
+    {
+      "name": "Седани",
+      "description": "Комфортні автомобілі для довгих подорожей.",
+      "slug": "sedans",
+      "image": "https://example.com/sedans-category.jpg",
+      "subCategories": [
+        {
+          "name": "Люксові Седани",
+          "description": "Розкішні автомобілі для тих, хто цінує комфорт і престиж.",
+          "slug": "luxury-sedans",
+          "image": "https://example.com/luxury-sedans.jpg",
+          "subCategories": [
+            {
+              "name": "Преміум Люксові Седани",
+              "description": "Преміум класу седани для найвимогливіших.",
+              "slug": "premium-luxury-sedans",
+              "image": "https://example.com/premium-luxury-sedans.jpg",
+              "subCategories": [
+                {
+                  "name": "Ультра Люксові Седани",
+                  "description": "Найрозкішніші автомобілі з бездоганною якістю.",
+                  "slug": "ultra-luxury-sedans",
+                  "image": "https://example.com/ultra-luxury-sedans.jpg",
+                  "subCategories": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Електричні Седани",
+          "description": "Сучасні електромобілі з новітніми технологіями.",
+          "slug": "electric-sedans",
+          "image": "https://example.com/electric-sedans.jpg",
+          "subCategories": []
+        }
+      ]
+    },
+    {
+      "name": "Позашляховики",
+      "description": "Машини для подорожей по бездоріжжю.",
+      "slug": "suvs",
+      "image": "https://example.com/suvs-category.jpg",
+      "subCategories": [
+        {
+          "name": "Люксові Позашляховики",
+          "description": "Розкішні позашляховики для тих, хто цінує комфорт і можливості.",
+          "slug": "luxury-suvs",
+          "image": "https://example.com/luxury-suvs.jpg",
+          "subCategories": []
+        },
+        {
+          "name": "Позашляховики для бездоріжжя",
+          "description": "Автомобілі для екстремальних умов.",
+          "slug": "offroad-suvs",
+          "image": "https://example.com/offroad-suvs.jpg",
+          "subCategories": []
+        }
+      ]
+    }
+  ],
+  "cars": [
+    {
+      "name": "Tesla Model S",
+      "price": 80000,
+      "color": "Білий",
+      "image": "https://example.com/tesla-model-s.jpg",
+      "description": "Електричний седан з футуристичним дизайном.",
+      "slug": "tesla-model-s",
+      "category": "electric-sedans"
+    },
+    {
+      "name": "BMW 7 Series",
+      "price": 120000,
+      "color": "Синій",
+      "image": "https://example.com/bmw-7-series.jpg",
+      "description": "Люксовий седан з потужним двигуном і високоякісними матеріалами.",
+      "slug": "bmw-7-series",
+      "category": "luxury-sedans"
+    },
+    {
+      "name": "Mercedes S-Class",
+      "price": 140000,
+      "color": "Чорний",
+      "image": "https://example.com/mercedes-s-class.jpg",
+      "description": "Преміум люксовий седан з надсучасними технологіями.",
+      "slug": "mercedes-s-class",
+      "category": "premium-luxury-sedans"
+    },
+    {
+      "name": "Rolls Royce Phantom",
+      "price": 500000,
+      "color": "Золотий",
+      "image": "https://example.com/rolls-royce-phantom.jpg",
+      "description": "Ультра люксовий седан для найвибагливіших.",
+      "slug": "rolls-royce-phantom",
+      "category": "ultra-luxury-sedans"
+    },
+    {
+      "name": "Land Rover Defender",
+      "price": 50000,
+      "color": "Чорний",
+      "image": "https://example.com/land-rover-defender.jpg",
+      "description": "Позашляховик для бездоріжжя з винятковою прохідністю.",
+      "slug": "land-rover-defender",
+      "category": "offroad-suvs"
+    },
+    {
+      "name": "Range Rover",
+      "price": 150000,
+      "color": "Золотий",
+      "image": "https://example.com/range-rover.jpg",
+      "description": "Люксовий позашляховик з висококласними характеристиками.",
+      "slug": "range-rover",
+      "category": "luxury-suvs"
+    }
+  ]
+}

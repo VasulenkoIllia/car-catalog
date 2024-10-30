@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+#  app:
+#    build: .
+#    container_name: car-catalog-app
+#    ports:
+#      - '3001:3000'
+#    environment:
+#      - MONGO_URI=mongodb://admin:admin@mongo:27017/car_catalog?authSource=admin
+#    depends_on:
+#      - mongo
+#    volumes:
+#      - .:/app
+#      - /app/node_modules
+#    restart: unless-stopped
+
+  mongo:
+    image: mongo:5.0
+    container_name: car-catalog-mongo
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+
+volumes:
+  mongo-data:

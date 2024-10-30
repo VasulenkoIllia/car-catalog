@@ -1,0 +1,69 @@
+<h1>{{title}}</h1>
+
+<nav>
+	<a href="/">Головна</a> &gt;
+</nav>
+
+{{#if categories.length}}
+	<h2>Категорії:</h2>
+	<ul>
+		{{#each categories}}
+			<li>
+				<h2><a href="/categories/category-{{this.slug}}">{{this.name}}</a></h2>
+				<p>{{this.description}}</p>
+				<img src="{{this.image}}" alt="{{this.name}}" style="width: 100px; height: 100px; object-fit: cover;">
+
+				{{#if this.cars.length}}
+					<h3>Автомобілі в категорії {{this.name}}:</h3>
+					<ul>
+						{{#each this.cars}}
+							<li>
+								<a href="/categories/{{fullPath}}">
+									<img src="{{this.image}}" alt="{{this.name}}" style="width: 100px; height: 100px; object-fit: cover;">
+									{{this.name}} - {{this.price}}$
+								</a>
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<p>Немає автомобілів у цій категорії.</p>
+				{{/if}}
+
+				{{#if this.subCategories.length}}
+					<h3>Підкатегорії:</h3>
+					<ul>
+						{{#each this.subCategories}}
+							<li>
+								<h3><a href="/categories/category-{{../slug}}/category-{{this.slug}}">{{this.name}}</a></h3>
+								<p>{{this.description}}</p>
+								<img src="{{this.image}}" alt="{{this.name}}" style="width: 100px; height: 100px; object-fit: cover;">
+
+								{{#if this.cars.length}}
+									<h4>Автомобілі в підкатегорії {{this.name}}:</h4>
+									<ul>
+										{{#each this.cars}}
+											<li>
+												<a href="/categories/{{fullPath}}">
+													<img src="{{this.image}}" alt="{{this.name}}" style="width: 100px; height: 100px; object-fit: cover;">
+													{{this.name}} - {{this.price}}$
+												</a>
+											</li>
+										{{/each}}
+									</ul>
+								{{else}}
+									<p>Немає автомобілів у цій підкатегорії.</p>
+								{{/if}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<p>Немає підкатегорій.</p>
+				{{/if}}
+			</li>
+		{{/each}}
+	</ul>
+{{else}}
+	<p>Немає доступних категорій.</p>
+{{/if}}
+
+
